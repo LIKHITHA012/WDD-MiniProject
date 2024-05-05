@@ -20,9 +20,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link " href="/">HOME<span class="sr-only"></span></a>
+            <a class="nav-link " href="/">Home <span class="sr-only"></span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item"> 
             <a class="nav-link" href="/about.html">ABOUT</a>
           </li>
           <li class="nav-item dropdown">
@@ -39,10 +39,8 @@
               <li><a class="dropdown-item" href="https://www.medicalnewstoday.com/articles/these-7-healthy-lifestyle-habits-can-help-prevent-depression-new-study-finds">Healthy Habits and Lifestyle</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact.html">CONTACT US</a>
-          </li>
         </ul>
+        
         <div class="mx-2">
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" >Login</button>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal" >Sign Up</button>
@@ -63,27 +61,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="/login" method="post">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
+          
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    
     </div>
   </div>
 </div>
@@ -99,27 +91,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="/register" method="post">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="email">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="password" name="password">
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          
+          <button type="submit" class="btn btn-primary" id="signupBtn">Submit</button>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -178,7 +164,7 @@
                 </a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <img class="bd-placeholder-img" width="200" height="250"
+                <img class="bd-placeholder-img" width="300" height="250"
                   src="https://mentalhealth.mcmaster.ca/app/uploads/2021/06/Stress-and-anxiety-1080x675-1-1024x640.jpeg"
                   alt="Anxitey and Stress Managment img">
               </div>
@@ -199,7 +185,7 @@
                 </a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <img class="bd-placeholder-img" width="200" height="250"
+                <img class="bd-placeholder-img" width="250" height="250"
                   src="https://plantationrelationshipcounseling.com/wp-content/uploads/couple-looking-away-1000x675.jpg"
                   alt="Relationships and Communication img">
               </div>
@@ -247,7 +233,7 @@
             </a>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <img class="bd-placeholder-img" width="200" height="250"
+            <img class="bd-placeholder-img" width="300" height="250"
               src="https://brightchamps.com/blog/wp-content/uploads/2023/08/shutterstock_2044430357.webp"
               alt="Peer Pressure and Bullying img">
           </div>

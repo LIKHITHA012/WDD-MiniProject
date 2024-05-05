@@ -21,28 +21,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">HOME<span class="sr-only"></span></a>
+                        <a class="nav-link" href="/" id="home-link">Home <span class="sr-only"></span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            TOPICS
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.healthline.com/nutrition/16-ways-relieve-stress-anxiety">Anxiety and Stress Management</a></li>
-                            <li><a class="dropdown-item" href="https://kidshealth.org/en/teens/body-image.html">Self-Esteem and Body Image</a></li>
-                            <li><a class="dropdown-item" href="https://www.betterhealth.vic.gov.au/health/healthyliving/relationships-and-communication">Relationships and Communication</a></li>
-                            <li><a class="dropdown-item" href="https://www.unicef.org/rosa/stories/talking-about-body-image-bullying-and-peer-pressure">Peer Pressure and Bullying</a></li>
-                            <li><a class="dropdown-item" href="https://www.bewellline.com/post/how-to-deal-with-school-stress-and-anxiety">School and Academic Stress</a></li>
-                            <li><a class="dropdown-item" href="https://blogs.docthub.com/mindfulness-and-meditation-promoting-mental-health-and-wellness-BLG171">Mindfulness and Meditation</a></li>
-                            <li><a class="dropdown-item" href="https://www.medicalnewstoday.com/articles/these-7-healthy-lifestyle-habits-can-help-prevent-depression-new-study-finds">Healthy Habits and Lifestyle</a></li>
-                          </ul>
-                    </li>
+                    
+                    
                     <li class="nav-item active">
-                        <a class="nav-link" href="/contact.html">CONTACT US</a>
+                        <a class="nav-link" href="contact.html">CONTACT US</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -52,22 +36,27 @@
             </div>
         </div>
     </nav>
+    <div class="popup" id="popup">
+        <span class="popup-text">You will be logged out</span>
+    </div>
+
+
 
     <div class="container my-4">
         <div class="row">
             <div class="col-md-12">
                 <h2>Contact Us</h2>
-                <form>
+                <form action="https://getform.io/f/zazkgnyb" method="post">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
                     </div>
     
                     <div class="form-group row">
                         <div class="col-sm-2">Are you a Member?</div>
                         <div class="col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox">
                                 <label class="form-check-label" for="gridCheck1">
                                     Yes
                                 </label>
@@ -77,12 +66,12 @@
     
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Tell us about yourself</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="about-Yourself"></textarea>
                     </div>
     
                     <div class="form-group">
                         <label for="exampleFormControlTextarea2">Elaborate Your Concern</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" name="concern"></textarea>
                     </div>
     
                     <div class="form-group row">
@@ -107,3 +96,38 @@
         crossorigin="anonymous"></script>
 
 </body>
+
+<style>
+    .popup {
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+
+.popup-text {
+  font-size: 14px;
+  color: #333;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const homeLink = document.getElementById("home-link");
+  const popup = document.getElementById("popup");
+
+  homeLink.addEventListener("mouseover", function() {
+    popup.style.display = "block";
+    // Position the popup relative to the link
+    const linkRect = homeLink.getBoundingClientRect();
+    popup.style.top = linkRect.bottom + "px";
+    popup.style.left = linkRect.left + "px";
+  });
+
+  homeLink.addEventListener("mouseout", function() {
+    popup.style.display = "none";
+  });
+});
+</script>
+</html>
